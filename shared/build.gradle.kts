@@ -51,6 +51,9 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
+        val iosX64Main by getting
+        val iosArm64Main by getting
+        val iosSimulatorArm64Main by getting
         val androidMain by getting {
             dependencies {
                 implementation("com.squareup.sqldelight:android-driver:1.5.5")
@@ -60,7 +63,14 @@ kotlin {
             dependencies {
                 implementation("com.squareup.sqldelight:native-driver:1.5.5")
             }
+            dependsOn(commonMain)
+            iosX64Main.dependsOn(this)
+            iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
         }
+        val iosX64Test by getting
+        val iosArm64Test by getting
+        val iosSimulatorArm64Test by getting
     }
 }
 
