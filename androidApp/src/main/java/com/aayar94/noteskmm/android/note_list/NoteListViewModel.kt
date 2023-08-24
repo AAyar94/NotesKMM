@@ -18,7 +18,6 @@ class NoteListViewModel @Inject constructor(
     private val noteDataSource: NoteDataSource,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
-
     private val searchNotes = SearchNotes()
 
     private val notes = savedStateHandle.getStateFlow("notes", emptyList<Note>())
@@ -43,16 +42,16 @@ class NoteListViewModel @Inject constructor(
         savedStateHandle["searchText"] = text
     }
 
-    fun onToggledSearch() {
+    fun onToggleSearch() {
         savedStateHandle["isSearchActive"] = !isSearchActive.value
-        if (!isSearchActive.value) {
-            savedStateHandle["isSearchActive"] = ""
+        if(!isSearchActive.value) {
+            savedStateHandle["searchText"] = ""
         }
     }
 
     fun deleteNoteById(id: Long) {
         viewModelScope.launch {
-            noteDataSource.deleteNoteById(id = id)
+            noteDataSource.deleteNoteById(id)
             loadNotes()
         }
     }

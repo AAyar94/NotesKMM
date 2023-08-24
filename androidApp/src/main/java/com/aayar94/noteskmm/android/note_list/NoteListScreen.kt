@@ -1,5 +1,6 @@
 package com.aayar94.noteskmm.android.note_list
 
+import HideableSearchTextField
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -60,15 +61,15 @@ fun NoteListScreen(
                 .padding(padding)
         ) {
             Box(
-
+                modifier = Modifier.fillMaxWidth(),
                 contentAlignment = Alignment.Center
             ) {
-                HideableTextField(
+                HideableSearchTextField(
                     text = state.searchText,
                     isSearchActive = state.isSearchActive,
                     onTextChange = viewModel::onSearchTextChange,
-                    onSearchClick = { viewModel::onToggledSearch },
-                    onCloseClick = { viewModel::onToggledSearch },
+                    onSearchClick = viewModel::onToggleSearch,
+                    onCloseClick = viewModel::onToggleSearch,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(90.dp)

@@ -1,5 +1,3 @@
-package com.aayar94.noteskmm.android.note_list
-
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -7,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
@@ -19,23 +18,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HideableTextField(
+fun HideableSearchTextField(
     text: String,
     isSearchActive: Boolean,
     onTextChange: (String) -> Unit,
     onSearchClick: () -> Unit,
     onCloseClick: () -> Unit,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     Box(modifier = modifier) {
-        AnimatedVisibility(visible = isSearchActive, enter = fadeIn(), exit = fadeOut()) {
+        AnimatedVisibility(
+            visible = isSearchActive,
+            enter = fadeIn(),
+            exit = fadeOut()
+        ) {
             OutlinedTextField(
                 value = text,
                 onValueChange = onTextChange,
-                shape = RoundedCornerShape(15.dp),
-                placeholder = {
-                    Text(text = "Search")
-                },
+                shape = RoundedCornerShape(50.dp),
+                placeholder = { Text(text = "Search") },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp)
@@ -46,34 +47,27 @@ fun HideableTextField(
             visible = isSearchActive,
             enter = fadeIn(),
             exit = fadeOut(),
-            modifier = Modifier.align(
-                Alignment.CenterEnd
-            )
+            modifier = Modifier.align(Alignment.CenterEnd)
         ) {
-            IconButton(onClick = { onCloseClick }) {
-                androidx.compose.material.Icon(
+            IconButton(onClick = onCloseClick) {
+                Icon(
                     imageVector = Icons.Default.Close,
-                    contentDescription = "Close Search"
+                    contentDescription = "Close search"
                 )
             }
-
         }
         AnimatedVisibility(
             visible = !isSearchActive,
             enter = fadeIn(),
             exit = fadeOut(),
-            modifier = Modifier.align(
-                Alignment.CenterEnd
-            )
+            modifier = Modifier.align(Alignment.CenterEnd)
         ) {
-            IconButton(onClick = { onSearchClick }) {
-                androidx.compose.material.Icon(
+            IconButton(onClick = onSearchClick) {
+                Icon(
                     imageVector = Icons.Default.Search,
-                    contentDescription = "Open Search"
+                    contentDescription = "Open search"
                 )
             }
-
         }
     }
-
 }
