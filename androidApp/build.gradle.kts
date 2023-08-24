@@ -53,7 +53,7 @@ android {
         implementation("androidx.compose.material:material:1.5.0")
         implementation("androidx.activity:activity-compose:1.7.2")
 
-        coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+        coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
         implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
 
