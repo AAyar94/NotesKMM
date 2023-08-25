@@ -13,6 +13,9 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		CE8BAA772A97E4BD00259E25 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BAA762A97E4BD00259E25 /* NoteListViewModel.swift */; };
 		CE8BAA792A97E4E100259E25 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BAA782A97E4E100259E25 /* NoteListScreen.swift */; };
+		CEE351242A98751E0097FE25 /* HideableSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE351232A98751E0097FE25 /* HideableSearchTextField.swift */; };
+		CEE351262A987A6C0097FE25 /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE351252A987A6C0097FE25 /* NoteItem.swift */; };
+		CEE351282A987F000097FE25 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE351272A987F000097FE25 /* Colors.swift */; };
 		D1E0E5F4B63F798ECCADBA15 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D592ECBC583E6D917FC6BF8F /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8BAA762A97E4BD00259E25 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
 		CE8BAA782A97E4E100259E25 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
+		CEE351232A98751E0097FE25 /* HideableSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideableSearchTextField.swift; sourceTree = "<group>"; };
+		CEE351252A987A6C0097FE25 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
+		CEE351272A987F000097FE25 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D592ECBC583E6D917FC6BF8F /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4CB46E15D9DDF124CFCC65 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +100,7 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				CEE351272A987F000097FE25 /* Colors.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 			children = (
 				CE8BAA762A97E4BD00259E25 /* NoteListViewModel.swift */,
 				CE8BAA782A97E4E100259E25 /* NoteListScreen.swift */,
+				CEE351232A98751E0097FE25 /* HideableSearchTextField.swift */,
+				CEE351252A987A6C0097FE25 /* NoteItem.swift */,
 			);
 			path = note_list;
 			sourceTree = "<group>";
@@ -240,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE351262A987A6C0097FE25 /* NoteItem.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				CE8BAA792A97E4E100259E25 /* NoteListScreen.swift in Sources */,
+				CEE351282A987F000097FE25 /* Colors.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				CE8BAA772A97E4BD00259E25 /* NoteListViewModel.swift in Sources */,
+				CEE351242A98751E0097FE25 /* HideableSearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +392,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +419,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
