@@ -39,7 +39,7 @@ Notes app; **Kotlin**, **SwiftUI**, **Dagger Hilt**, **Coroutines**, **Lifecycle
 <img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/androidscreenshot1.png" width="30%" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/androidscreenshot2.png" width="30%" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/androidscreenshot3.png" width="30%" />
 </div>
 <div style="display: flex; justify-content: space-between;">
-<img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot1.png" width="250" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot2.png" width="250" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot3.png" width="250" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot4.png" width="250" />
+<img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot2.png" width="250" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot3.png" width="250" /><img src="https://github.com/AAyar94/NotesKMM/blob/main/screenshots/iosscreenshot4.png" width="250" />
 
 </div>
 
